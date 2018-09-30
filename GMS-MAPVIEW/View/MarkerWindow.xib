@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="MarkerWindow" customModule="GMS_MAPVIEW" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="82D-dx-pna">
+                    <rect key="frame" x="37.5" y="294.5" width="300" height="98"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ft0-2j-gg1">
+                            <rect key="frame" x="8" y="8" width="284" height="18"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NVb-ef-HW2">
+                            <rect key="frame" x="8" y="34" width="284" height="18"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OM8-EY-tej">
+                            <rect key="frame" x="8" y="60" width="284" height="30"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                            <state key="normal" title="View on google map"/>
+                            <connections>
+                                <action selector="clicked:" destination="iN0-l3-epB" eventType="touchUpInside" id="KPT-HM-5ez"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="OM8-EY-tej" secondAttribute="trailing" constant="8" id="A1x-cV-a7q"/>
+                        <constraint firstAttribute="width" constant="300" id="Id8-5L-iue"/>
+                        <constraint firstItem="NVb-ef-HW2" firstAttribute="leading" secondItem="82D-dx-pna" secondAttribute="leading" constant="8" id="RkT-Td-aen"/>
+                        <constraint firstItem="OM8-EY-tej" firstAttribute="top" secondItem="NVb-ef-HW2" secondAttribute="bottom" constant="8" id="YPQ-VA-UXT"/>
+                        <constraint firstItem="Ft0-2j-gg1" firstAttribute="leading" secondItem="82D-dx-pna" secondAttribute="leading" constant="8" id="YZR-nc-dS6"/>
+                        <constraint firstAttribute="trailing" secondItem="NVb-ef-HW2" secondAttribute="trailing" constant="8" id="cHz-DC-2EB"/>
+                        <constraint firstItem="OM8-EY-tej" firstAttribute="leading" secondItem="82D-dx-pna" secondAttribute="leading" constant="8" id="gIj-qQ-LW5"/>
+                        <constraint firstAttribute="bottom" secondItem="OM8-EY-tej" secondAttribute="bottom" constant="8" id="iTe-Gp-CqF"/>
+                        <constraint firstItem="Ft0-2j-gg1" firstAttribute="top" secondItem="82D-dx-pna" secondAttribute="top" constant="8" id="iy1-9M-0Wf"/>
+                        <constraint firstAttribute="trailing" secondItem="Ft0-2j-gg1" secondAttribute="trailing" constant="8" id="kuu-6u-bFb"/>
+                        <constraint firstItem="NVb-ef-HW2" firstAttribute="top" secondItem="Ft0-2j-gg1" secondAttribute="bottom" constant="8" id="pQe-zz-V2E"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="82D-dx-pna" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="75Q-PW-NLU"/>
+                <constraint firstItem="82D-dx-pna" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="bcY-t2-MLR"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="btnViewOnMap" destination="OM8-EY-tej" id="iI8-rc-P0H"/>
+                <outlet property="lblDesc" destination="NVb-ef-HW2" id="qx3-Rh-QMY"/>
+                <outlet property="lblTitle" destination="Ft0-2j-gg1" id="9eX-aq-5yj"/>
+                <outlet property="subView" destination="82D-dx-pna" id="gKY-6z-0kd"/>
+            </connections>
+            <point key="canvasLocation" x="54.5" y="247.5"/>
+        </view>
+    </objects>
+</document>
